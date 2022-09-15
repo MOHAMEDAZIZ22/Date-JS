@@ -1,0 +1,16 @@
+body{
+    /* align-items: center; */
+    display: flex;
+}
+#btn1{
+    position: relative;
+    left: 100px;
+    color: red;
+}
+#btn2{
+    position: relative;
+    left: 200px;
+    color: green;
+    /* align-items: center; */
+
+}

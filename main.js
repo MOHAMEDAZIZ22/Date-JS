@@ -16,25 +16,55 @@
 // value3.innerText = now.getFullYear()
 // const date = Date().toString();
 
-const now = new Date();
+// const now = new Date();
 
-console.log(now.getDate());
-console.log(now.getMonth());
-console.log(now.getFullYear());
-console.log(now.getHours());
-console.log(now.getMinutes());
-console.log(now.getSeconds());
-
-// document.getElementById('da').innerHTML.innerHTML = (now.getDate());
+// console.log(now.getDate());
+// console.log(now.getMonth());
+// console.log(now.getFullYear());
+// console.log(now.getHours());
+// console.log(now.getMinutes());
+// console.log(now.getSeconds());
 
 
 
-// const [month, date, year] = new Date().
-//     toLocaleDateString("en-IN").split("/");
-// console.log(new Date().toLocaleDateString("en-IN").split("/"));
-// console.log(month, date, year);
+//NEW Date//
 
-// const date = new Date();
-// const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
-// const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+var button1 = document.querySelector('#btn1');
+var button2 = document.querySelector('#btn2');
+
+button1.addEventListener('click', () => {
+    var today = new Date();
+    
+
+    var month = today.getMonth() + 1;
+    var year = today.getFullYear();
+    var date = today.getDate();
+
+    var current_date = `${month}/${date}/${year}`;
+
+    button1.innerText = current_date;
+});
+
+button2.addEventListener('click', () => {
+    var time = new Date();
+      
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+
+        var current_time = `${hours}:${minutes}:${seconds}`;
+        button2.innerText = current_time;
+
+});
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(toString(fruits));
+// document.getElementById("demo").innerHTML = fruits.toString();
+
+
+// console.log(a);
+// var a = 10;
+
+
+
 
