@@ -27,18 +27,19 @@
 
 
 
-//NEW Date//
+//get Date//
+
 
 var button1 = document.querySelector('#btn1');
 var button2 = document.querySelector('#btn2');
+var button3 = document.querySelector("#btn3");
 
 button1.addEventListener('click', () => {
     var today = new Date();
-    
-
     var month = today.getMonth() + 1;
     var year = today.getFullYear();
     var date = today.getDate();
+    // var aziz =today.getTime();
 
     var current_date = `${month}/${date}/${year}`;
 
@@ -47,24 +48,42 @@ button1.addEventListener('click', () => {
 
 button2.addEventListener('click', () => {
     var time = new Date();
-      
-        var hours = time.getHours();
-        var minutes = time.getMinutes();
-        var seconds = time.getSeconds();
 
-        var current_time = `${hours}:${minutes}:${seconds}`;
-        button2.innerText = current_time;
+    // var hours = time.getHours();
+    // var minutes = time.getMinutes();
+    // var seconds = time.getSeconds();
+    // var current_time = `${hours}:${minutes}:${seconds}`;
+    // button2.innerText = current_time;
 
-});
+  var current = time.toLocaleString();
+ button2.innerText = current;
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(toString(fruits));
-// document.getElementById("demo").innerHTML = fruits.toString();
+ });
+ 
+ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+ const today = new Date();
+ let day = weekday[today.getDay()];
+ console.log(day)
 
 
-// console.log(a);
-// var a = 10;
+//set date
 
+const x = new Date();
+x.setHours(3);
+console.log(x);
+x.setDate(7);
+console.log(x)
+x.setFullYear(1970);
+console.log(x);
+
+
+const y = new Date();
+console.log("month",y.getMonth()+1);
+
+// console.log("year",y.getyear());
+// console.log("date",y.getDate());
+// console.log(y);
 
 
 
